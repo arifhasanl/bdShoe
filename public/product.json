@@ -1,0 +1,753 @@
+
+[
+  {
+    
+    "id": 4,
+    "name": "Adidas Pro Hiker",
+    "category": "Hiking",
+    "brand": "Adidas",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1593579306692-44a391c5a774?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "Waterproof and rugged, this boot is built for the toughest trails. Features an anti-fatigue footbed for all-day comfort.",
+    "tags": ["outdoor", "new-arrival"],
+    "man": "women"
+  },
+  {
+    
+    "id": 5,
+    "name": "Apex Venetian Loafer",
+    "category": "Loafers",
+    "brand": "Apex",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1617606001399-96d88b42d13f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black", "Tan"],
+    "sizes": [7, 8, 9],
+    "rating": 4,
+    "description": "A versatile slip-on crafted from rich suede. The cushioned insole provides superior comfort for everyday wear.",
+    "tags": ["trending"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 7,
+    "name": "Birkenstock Arizona Sandal",
+    "category": "Sandals",
+    "brand": "Birkenstock",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1601449085959-5bf06416f41e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black", "White"],
+    "sizes": [6, 7, 8, 9],
+    "rating": 5,
+    "description": "An iconic two-strap sandal with a contoured cork footbed that conforms to the shape of your foot.",
+    "tags": ["summer-collection", "comfort"],
+    "man": "women"
+  },
+  {
+    
+    "id": 10,
+    "name": "Salomon Quest 4 GTX",
+    "category": "Hiking",
+    "brand": "Salomon",
+    "price": 230,
+    "image": "https://images.unsplash.com/photo-1631495900332-9a02297122b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Grey", "Olive"],
+    "sizes": [9, 10],
+    "rating": 5,
+    "description": "A premium backpacking boot offering stability and comfort. GORE-TEX waterproofing keeps your feet dry.",
+    "tags": ["outdoor", "new-arrival"],
+    "man": "women"
+  },
+  {
+    
+    "id": 11,
+    "name": "Vans Old Skool",
+    "category": "Sneakers",
+    "brand": "Apex",
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "White"],
+    "sizes": [6, 7, 8, 9, 10],
+    "rating": 4,
+    "description": "The iconic skate shoe with the signature sidestripe. Features a durable canvas and suede upper.",
+    "tags": ["best-seller", "skate"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 13,
+    "name": "Caterpillar Intruder Boot",
+    "category": "Boots",
+    "brand": "Gucci",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Yellow", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "A chunky, street-ready boot with a durable construction inspired by classic workwear.",
+    "tags": ["trending"],
+    "man": "women"
+  },
+  {
+    
+    "id": 14,
+    "name": "Teva Original Universal",
+    "category": "Sandals",
+    "brand": "Apex",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1621983344605-e8b82a173859?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Multicolor"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 4,
+    "description": "The original sport sandal, built for adventure. Quick-drying straps and a durable rubber outsole.",
+    "tags": ["summer-collection", "outdoor"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 21,
+    "name": "Allen Edmonds Park Avenue",
+    "category": "Formal",
+    "brand": "Adidas",
+    "price": 395,
+    "image": "https://images.unsplash.com/photo-1585856330333-f592d3b44491?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Dark Chili"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "A cornerstone of any professional wardrobe. This cap-toe oxford is handcrafted in the USA.",
+    "tags": ["luxury", "formal-wear"],
+    "man": "men"
+  },
+  {
+    
+    "id": 23,
+    "name": "Tod's Gommino Driving Loafer",
+    "category": "Loafers",
+    "brand": "Adidas",
+    "price": 495,
+    "image": "https://images.unsplash.com/photo-1605557626691-888390887186?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Red", "Brown", "Black"],
+    "sizes": [7, 8, 9],
+    "rating": 5,
+    "description": "The original driving shoe, famous for its 133 rubber pebbles embedded in the sole for ultimate grip and comfort.",
+    "tags": ["luxury", "classic"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 30,
+    "name": "UGG Classic Mini Boot",
+    "category": "Boots",
+    "brand": "UGG",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1608256247732-6a4a2a78e7b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Chestnut", "Black"],
+    "sizes": [6, 7, 8, 9],
+    "rating": 5,
+    "description": "Iconic for its soft sheepskin and enduring design. Lined with plush wool for ultimate warmth and comfort.",
+    "tags": ["winter-collection", "comfort"],
+    "man": "men"
+  },
+  {
+    
+    "id": 35,
+    "name": "R.M. Williams Comfort Craftsman",
+    "category": "Boots",
+    "brand": "R.M. Williams",
+    "price": 545,
+    "image": "https://images.unsplash.com/photo-1603848248915-d14697394209?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "A legendary Australian Chelsea boot, handcrafted from a single piece of leather for ultimate durability and style.",
+    "tags": ["luxury", "heritage"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 38,
+    "name": "Adidas Adilette Slides",
+    "category": "Sandals",
+    "brand": "Adidas",
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1608231387042-82d27e5be6b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "White"],
+    "sizes": [6, 7, 8, 9, 10],
+    "rating": 4,
+    "description": "The original sports slide. Perfect for post-workout comfort or casual poolside style.",
+    "tags": ["summer-collection", "classic"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 44,
+    "name": "Reef Fanning Sandal",
+    "category": "Sandals",
+    "brand": "Reef",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1522194911364-0557408f6c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Brown"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "The only sandal with a built-in bottle opener in the sole. Features a comfortable air-cushioned heel.",
+    "tags": ["summer-collection", "fun"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 3,
+    "name": "Bata Classic Leather Oxford",
+    "category": "Formal",
+    "brand": "Bata",
+    "price": 95,
+    "image": "https://images.unsplash.com/photo-1529341460925-5c1a54b31648?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [7, 8, 9],
+    "rating": 4,
+    "description": "Timeless elegance meets modern comfort. Crafted from genuine leather for a polished, professional look.",
+    "tags": ["best-seller", "formal-wear"],
+    "man": "men"
+  },
+  {
+    
+    "id": 8,
+    "name": "Puma Suede Classic",
+    "category": "Sneakers",
+    "brand": "Puma",
+    "price": 70,
+    "image": "https://images.unsplash.com/photo-1595950653106-6090ee36959b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Red", "Black", "Blue"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 4,
+    "description": "A timeless classic that has been a style icon since the '60s. Soft suede upper and a durable rubber outsole.",
+    "tags": ["classic", "trending"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 12,
+    "name": "Gucci Horsebit Loafer",
+    "category": "Loafers",
+    "brand": "Gucci",
+    "price": 890,
+    "image": "https://images.unsplash.com/photo-1589188033067-f37058bb38d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Brown"],
+    "sizes": [7, 8, 9],
+    "rating": 5,
+    "description": "The epitome of luxury. This iconic loafer is crafted in Italy from supple leather and finished with the signature Horsebit detail.",
+    "tags": ["luxury"],
+    "man": "men"
+  },
+  {
+    
+    "id": 17,
+    "name": "Sperry Top-Sider Loafer",
+    "category": "Loafers",
+    "brand": "Puma",
+    "price": 95,
+    "image": "https://images.unsplash.com/photo-1551107696-a4b3d5a2d1d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Navy", "Brown"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "The authentic original boat shoe. A true icon of prep style with a non-slip sole.",
+    "tags": ["classic"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 18,
+    "name": "Red Wing Iron Ranger",
+    "category": "Boots",
+    "brand": "Red Wing",
+    "price": 330,
+    "image": "https://images.unsplash.com/photo-1599824648117-690184d2f447?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Amber", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "A rugged and iconic 6-inch boot, originally built for iron miners. Made with premium leather that gets better with age.",
+    "tags": ["heritage", "best-seller"],
+    "man": "men"
+  },
+  {
+    
+    "id": 19,
+    "name": "Havaianas Top Flip-Flop",
+    "category": "Sandals",
+    "brand": "Havaianas",
+    "price": 26,
+    "image": "https://images.unsplash.com/photo-1590799621372-e50f6f8664a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Blue", "Black", "White"],
+    "sizes": [6, 7, 8, 9, 10],
+    "rating": 4,
+    "description": "The world's favorite flip-flop. Ultra-comfortable and durable, perfect for the beach or casual outings.",
+    "tags": ["summer-collection"],
+    "man": "women"
+  },
+  {
+    
+    "id": 24,
+    "name": "Blundstone 500 Original",
+    "category": "Boots",
+    "brand": "Blundstone",
+    "price": 210,
+    "image": "https://images.unsplash.com/photo-1633800261159-25f02c67b93b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "A versatile and durable Chelsea boot that's comfortable from the very first step. Water-resistant and built to last.",
+    "tags": ["best-seller"],
+    "man": "men"
+  },
+  {
+    
+    "id": 25,
+    "name": "Chaco Z/1 Classic Sandal",
+    "category": "Sandals",
+    "brand": "Chaco",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1619184428624-ad8d1b71d9ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Green"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "Fully adjustable straps and a podiatrist-certified footbed make this the ultimate adventure sandal.",
+    "tags": ["outdoor", "summer-collection"],
+    "man": "women"
+  },
+  {
+    
+    "id": 34,
+    "name": "Oboz Sawtooth II Low",
+    "category": "Hiking",
+    "brand": "Oboz",
+    "price": 115,
+    "image": "https://images.unsplash.com/photo-1587693899169-4a6c238b9dce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Canteen", "Brindle"],
+    "sizes": [9, 10],
+    "rating": 5,
+    "description": "A highly breathable and comfortable hiking shoe, famous for its supportive O FIT insole.",
+    "tags": ["outdoor"],
+    "man": "women"
+  },
+  {
+    
+    "id": 40,
+    "name": "Florsheim Imperial Kenmoor",
+    "category": "Formal",
+    "brand": "Florsheim",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1449505978122-05470553db40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Burgundy"],
+    "sizes": [8, 9],
+    "rating": 5,
+    "description": "A benchmark for longwing brogues, this shoe features timeless style and durable construction.",
+    "tags": ["formal-wear", "classic"],
+    "man": "women"
+  },
+  {
+    
+    "id": 42,
+    "name": "Sebago Docksides Loafer",
+    "category": "Loafers",
+    "brand": "Sebago",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1520622453835-34152b7a445e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Navy"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "Another iconic boat shoe, handsewn and built to be a wardrobe staple for years.",
+    "tags": ["classic"],
+    "man": "men"
+  },
+  {
+    
+    "id": 50,
+    "name": "On Cloud 5",
+    "category": "Sneakers",
+    "brand": "On",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1628106724338-a92db1019deb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Glacier/White", "All Black"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "The fan-favorite, re-engineered for an even better fit and more comfort. Known for its unique CloudTec® cushioning.",
+    "tags": ["running", "new-arrival", "trending"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 1,
+    "name": "Nike Air Zoom Pegasus 38",
+    "category": "Sneakers",
+    "brand": "Nike",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "White", "Blue"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "A responsive and durable running shoe, perfect for daily training. Features a breathable mesh upper and React foam cushioning.",
+    "tags": ["best-seller", "running"],
+    "man": "women"
+  },
+  {
+    
+    "id": 2,
+    "name": "Adidas Ultraboost 22",
+    "category": "Sneakers",
+    "brand": "Adidas",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1562183241-b937e95585b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "White", "Grey"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "Experience incredible energy return with the iconic Boost midsole. The Primeknit upper provides a snug, sock-like fit.",
+    "tags": ["trending", "new-arrival"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 6,
+    "name": "Dr. Martens 1460 Boot",
+    "category": "Boots",
+    "brand": "Dr. Martens",
+    "price": 170,
+    "image": "https://images.unsplash.com/photo-1624005168395-5747378748d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Cherry Red"],
+    "sizes": [6, 7, 8, 9, 10],
+    "rating": 5,
+    "description": "The original Dr. Martens boot, known for its durability and iconic style. Features an air-cushioned sole and yellow stitching.",
+    "tags": ["best-seller", "classic"],
+    "man": "men"
+  },
+  {
+    
+    "id": 20,
+    "name": "New Balance 990v5",
+    "category": "Sneakers",
+    "brand": "Puma",
+    "price": 185,
+    "image": "https://images.unsplash.com/photo-1584735174965-48c48d7edfde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Grey", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "An iconic sneaker that blends performance and style. Made in the USA with premium materials.",
+    "tags": ["classic", "best-seller"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 27,
+    "name": "Cole Haan Grand Troy Oxford",
+    "category": "Formal",
+    "brand": "Cole Haan",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1605812836291-75b8a32938a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Tan", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "A modern take on the classic oxford, blending traditional craftsmanship with innovative comfort technology.",
+    "tags": ["formal-wear", "new-arrival"],
+    "man": "men"
+  },
+  {
+    
+    "id": 29,
+    "name": "G.H. Bass & Co. Weejuns",
+    "category": "Loafers",
+    "brand": "G.H. Bass & Co.",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1628998895048-a00885141131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Wine", "Black"],
+    "sizes": [7, 8, 9],
+    "rating": 4,
+    "description": "The original penny loafer. A timeless silhouette that defines smart, casual style.",
+    "tags": ["classic"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 33,
+    "name": "Ecco Helsinki 2.0",
+    "category": "Formal",
+    "brand": "Ecco",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1544974245-d85c2d334346?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Amber"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "A versatile dress shoe with a focus on comfort. ECCO's fluidform technology provides a finely-tuned balance of cushioning and rebound.",
+    "tags": ["formal-wear", "comfort"],
+    "man": "men"
+  },
+  {
+    
+    "id": 43,
+    "name": "Sorel Caribou Boot",
+    "category": "Boots",
+    "brand": "Sorel",
+    "price": 170,
+    "image": "https://images.unsplash.com/photo-1606297314689-3d7c35843449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Buff", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "The ultimate winter boot, rated for extreme cold. Waterproof construction and a removable felt inner boot.",
+    "tags": ["winter-collection", "best-seller"],
+    "man": "women"
+  },
+  {
+    
+    "id": 49,
+    "name": "Scarpa Zodiac Plus GTX",
+    "category": "Hiking",
+    "brand": "Scarpa",
+    "price": 269,
+    "image": "https://images.unsplash.com/photo-1563721345-4c07153303a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Shark", "Orange"],
+    "sizes": [9, 10],
+    "rating": 5,
+    "description": "A technical hiking and backpacking boot that provides the precision of a climbing shoe with the stability of a boot.",
+    "tags": ["outdoor", "technical"],
+    "man": "women"
+  },
+  {
+    
+    "id": 9,
+    "name": "Apex Wingtip Brogue",
+    "category": "Formal",
+    "brand": "Apex",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1591195846835-f80f13543e3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 4,
+    "description": "Sophisticated wingtip detailing makes this formal shoe a standout. Perfect for weddings and business meetings.",
+    "tags": ["formal-wear"],
+    "man": "men"
+  },
+  {
+    
+    "id": 15,
+    "name": "Johnston & Murphy Cap-Toe",
+    "category": "Formal",
+    "brand": "Bata",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1575537302964-96447239b912?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [8, 9],
+    "rating": 5,
+    "description": "A classic cap-toe oxford that exudes confidence and style. Features premium leather and a cushioned footbed.",
+    "tags": ["formal-wear", "best-seller"],
+    "man": "men"
+  },
+  {
+    
+    "id": 16,
+    "name": "Merrell Moab 3",
+    "category": "Hiking",
+    "brand": "Puma",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1596755490333-68d4e02780e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Grey", "Brown"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "The world's best-selling hiker for a reason. Out-of-the-box comfort and versatile performance.",
+    "tags": ["best-seller", "outdoor"],
+    "man": "women"
+  },
+  {
+    
+    "id": 22,
+    "name": "Lowa Renegade GTX Mid",
+    "category": "Hiking",
+    "brand": "Adidas",
+    "price": 245,
+    "image": "https://images.unsplash.com/photo-1600378297926-728b76c81d85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Sepia", "Black"],
+    "sizes": [9, 10],
+    "rating": 5,
+    "description": "A legendary backpacking boot loved for its incredible comfort and versatility on any terrain.",
+    "tags": ["outdoor"],
+    "man": "women"
+  },
+  {
+    
+    "id": 26,
+    "name": "Reebok Classic Leather",
+    "category": "Sneakers",
+    "brand": "Reebok",
+    "price": 75,
+    "image": "https://images.unsplash.com/photo-1579338908476-3a3a1d71a706?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["White", "Black"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 4,
+    "description": "A soft leather upper provides superior comfort. This timeless shoe is a true classic.",
+    "tags": ["classic"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 28,
+    "name": "Keen Newport H2",
+    "category": "Hiking",
+    "brand": "Keen",
+    "price": 125,
+    "image": "https://images.unsplash.com/photo-1622327723255-663806140ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Green", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "The original hybrid sandal. This shoe is a roomy, grippy, quick-drying, and toe-protecting beast.",
+    "tags": ["outdoor", "sandal-hybrid"],
+    "man": "women"
+  },
+  {
+    
+    "id": 31,
+    "name": "Gucci Classic Clog",
+    "category": "Sandals",
+    "brand": "Gucci",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1603191617136-203899478440?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["White", "Black", "Blue"],
+    "sizes": [6, 7, 8, 9, 10],
+    "rating": 4,
+    "description": "The original, versatile, and comfortable clog that started a revolution. Incredibly light and fun to wear.",
+    "tags": ["comfort", "best-seller"],
+    "man": "women"
+  },
+  {
+    
+    "id": 32,
+    "name": "Converse Chuck 70",
+    "category": "Sneakers",
+    "brand": "Converse",
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Parchment", "Black"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "A modern re-crafting of the iconic Chuck Taylor, featuring premium materials and enhanced cushioning.",
+    "tags": ["classic", "best-seller"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 36,
+    "name": "Nike Air Force 1 '07",
+    "category": "Sneakers",
+    "brand": "Nike",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["White", "Black"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "The legend lives on. A modern version of the iconic AF1, blending classic style and fresh details.",
+    "tags": ["best-seller", "classic"],
+    "man": "men"
+  },
+  {
+    
+    "id": 37,
+    "name": "Bata Power Walkers",
+    "category": "Loafers",
+    "brand": "Bata",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Grey", "Black"],
+    "sizes": [7, 8, 9],
+    "rating": 3,
+    "description": "An affordable and comfortable slip-on for daily walks and errands.",
+    "tags": ["comfort"],
+    "man": "women"
+  },
+  {
+    
+    "id": 39,
+    "name": "Wolverine 1000 Mile Boot",
+    "category": "Boots",
+    "brand": "Apex",
+    "price": 385,
+    "image": "https://images.unsplash.com/photo-1548585802-39c8a4a5d09f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Brown", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "An American icon crafted with meticulous attention to detail. Made with Horween Chromexcel leather.",
+    "tags": ["heritage"],
+    "man": "men"
+  },
+  {
+    
+    "id": 41,
+    "name": "La Sportiva TarantuLace",
+    "category": "Hiking",
+    "brand": "Gucci",
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1610481232235-9005a76b8833?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Orange", "Blue"],
+    "sizes": [7, 8, 9],
+    "rating": 4,
+    "description": "An excellent all-around climbing shoe for beginners. Comfortable and easy to use.",
+    "tags": ["climbing", "outdoor"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 45,
+    "name": "Adidas Stan Smith",
+    "category": "Sneakers",
+    "brand": "Adidas",
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["White/Green", "White/Navy"],
+    "sizes": [7, 8, 9, 10],
+    "rating": 5,
+    "description": "A tennis court icon turned streetwear staple. Known for its clean, minimalist design.",
+    "tags": ["classic", "best-seller"],
+    "man": "men"
+  },
+  {
+    
+    "id": 46,
+    "name": "Bally Pearce Driver Loafer",
+    "category": "Loafers",
+    "brand": "Bata",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1617606001399-96d88b42d13f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Coffee", "Black"],
+    "sizes": [8, 9],
+    "rating": 5,
+    "description": "A sophisticated driving loafer from a Swiss luxury brand, featuring a durable rubber sole and fine craftsmanship.",
+    "tags": ["luxury"],
+    "man": "women"
+  },
+  {
+    
+    "id": 47,
+    "name": "Grenson Fred Brogue Boot",
+    "category": "Boots",
+    "brand": "Apex",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1604269259733-4a15a3d76426?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Tan", "Black"],
+    "sizes": [8, 9, 10],
+    "rating": 5,
+    "description": "A classic English brogue boot with oversized eyelets and a chunky, durable sole. A true style statement.",
+    "tags": ["heritage"],
+    "man": "kids"
+  },
+  {
+    
+    "id": 48,
+    "name": "Church's Consul Oxford",
+    "category": "Formal",
+    "brand": "Bata",
+    "price": 790,
+    "image": "https://images.unsplash.com/photo-1585856330333-f592d3b44491?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+    "colors": ["Black", "Walnut"],
+    "sizes": [8, 9],
+    "rating": 5,
+    "description": "A quintessentially English dress shoe, favored by politicians and business leaders. The epitome of formal elegance.",
+    "tags": ["luxury", "formal-wear"],
+    "man": "men"
+  }
+]
