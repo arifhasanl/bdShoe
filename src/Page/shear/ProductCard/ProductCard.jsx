@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
                <span className="text-gray-600 text-sm ml-2">({product.rating}.0)</span>
             </div>
             <div className="flex justify-between items-center mt-4">
-               <p className="text-xl font-semibold text-gray-900">${product.price.toFixed(2)}</p>
+               <p className="text-xl font-semibold text-gray-900">${product.price}</p>
                <Link to={`product/${product._id}`}><button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 transform active:scale-95">
                   Product Details
                   

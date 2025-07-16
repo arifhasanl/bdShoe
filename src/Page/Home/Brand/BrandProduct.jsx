@@ -4,7 +4,7 @@ import useProduct from '../../../Hooks/useProduct';
 import CategoryItem from '../Category/CategoryItem';
 import 'react-tabs/style/react-tabs.css';
 const BrandProduct = () => {
-   const [product, isLoading] = useProduct();
+   const [product, ,isLoading] = useProduct();
    const [tabIndex, setTabIndex] = useState(0);
 
    const Adidas = product?.filter(item => item.brand === 'Adidas')

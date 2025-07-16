@@ -40,7 +40,7 @@ const UpdateProduct = () => {
     const colors = ['Brown', 'Black', 'Tan', 'Dark Chili', 'Glacier/White', 'All Black'];
 
     const onSubmit = async (data) => {
-        let imageUrl = product.image; // Default to existing image URL
+        let imageUrl = product?.image; // Default to existing image URL
 
         // 3. If a new image is uploaded, upload it to ImgBB
         if (data.image && data.image.length > 0) {
@@ -204,7 +204,7 @@ const UpdateProduct = () => {
                 <div>
                     <label className={labelStyle}>Update Image</label>
                     <div className="flex items-center gap-4">
-                        {product.image && <img src={product.image} alt="Current" className="w-24 h-24 object-cover rounded-md" />}
+                        {product?.image && <img src={product?.image} alt="Current" className="w-24 h-24 object-cover rounded-md" />}
                         <input type="file" className='file-input file-input-bordered w-full max-w-xs' {...register('image')} />
                     </div>
                     <p className="text-xs text-gray-500 mt-1">Leave blank to keep the current image.</p>

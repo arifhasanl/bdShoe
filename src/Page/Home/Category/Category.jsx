@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CategoryItem from './CategoryItem';
 import 'react-tabs/style/react-tabs.css';
 const Category = () => {
-   const [product,isLoading]=useProduct();
+   const [product,,isLoading]=useProduct();
     const categories=['Sneakers','Formal','Boots','Loafers','Sandals','Hiking'];
    const indexCategory=categories.indexOf('Sneakers');
    console.log(indexCategory);

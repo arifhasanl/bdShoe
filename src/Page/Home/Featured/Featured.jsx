@@ -3,7 +3,7 @@ import useProduct from '../../../Hooks/useProduct';
 import ProductItem from './ProductItem';
 
 const Featured = () => {
-   const [product,isLoading]=useProduct();
+   const [product,,isLoading]=useProduct();
    console.log(product);
   // Filter products using useMemo for performance
   const bestSellers =  product.filter(p => p.tags.includes('best-seller')).slice(0, 5)
