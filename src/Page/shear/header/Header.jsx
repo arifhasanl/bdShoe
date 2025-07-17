@@ -12,7 +12,7 @@ const Header = () => {
   // মোবাইল মেন্যু খোলা বা বন্ধ করার জন্য State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
-  const [cart]=useCart()
+  const [cart]=useCart();
   const [isAdmin]=useAdmin();
   const handleLogOut = () => {
     logOut()
@@ -105,7 +105,7 @@ const Header = () => {
           </div>
 
           <div className="md:hidden flex items-center">
-            {/* {
+            {
               user?<Link to={isAdmin?'/dashboard/allUsers':'/dashboard/myCart'} className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
               <HiShoppingCart size={24} />
               <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >{cart?.length}</p>
@@ -113,7 +113,7 @@ const Header = () => {
               <HiShoppingCart size={24} />
               <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >0</p>
             </Link>
-            } */}
+            }
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               // হ্যামবার্গার মেন্যুর রঙ পরিবর্তন

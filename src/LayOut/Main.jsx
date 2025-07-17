@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Page/shear/header/Header';
 import { Outlet } from 'react-router-dom';
 import useProduct from '../Hooks/useProduct';
+import Footer from './../Page/shear/Footer/Footer';
 
 const Main = () => {
    // const [products,,isLoading]=useProduct()
@@ -16,6 +17,7 @@ const Main = () => {
       <div>
          <Header></Header>
          <Outlet></Outlet>
+         <Footer></Footer>
       </div>
    );
 };
