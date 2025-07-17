@@ -94,7 +94,7 @@ const MangeItem = () => {
                             <td className="p-4 font-bold text-gray-800">{item.name}</td>
                             
                             {/* Price কলাম (বাম দিকে অ্যালাইন) */}
-                            <td className="p-4 font-medium text-gray-700">${item.price.toFixed(2)}</td>
+                            <td className="p-4 font-medium text-gray-700">${item.price}</td>
                             
                             {/* Action কলাম (কন্টেন্ট সেন্টারে) */}
                             <td className="p-4 text-center">
