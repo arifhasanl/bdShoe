@@ -7,23 +7,26 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import useCart from '../../../Hooks/useCarts';
 import useAdmin from '../../../Hooks/useAdmin';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   // মোবাইল মেন্যু খোলা বা বন্ধ করার জন্য State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
-  const [cart]=useCart();
-  const [isAdmin]=useAdmin();
+  const [profile,setProfile]=useState(false)
+  const [cart] = useCart();
+  const [isAdmin] = useAdmin();
   const handleLogOut = () => {
     logOut()
       .then(res => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "SignUp successfully",
+          title: "LogOut successfully",
           showConfirmButton: false,
           timer: 1500
         });
+      setProfile(false)
       })
   }
   // মেন্যু আইটেমগুলো একটি অ্যারেতে রাখা হয়েছে যাতে সহজে ম্যাপ করা যায়
@@ -34,7 +37,7 @@ const Header = () => {
     { name: 'Kids', path: '/kids' },
     { name: 'About Us', path: '/about' },
   ];
-  
+
 
   return (
     <nav className="bg-gradient-to-r from-blue-800 to-indigo-900 shadow-lg sticky top-0 z-50">
@@ -67,52 +70,56 @@ const Header = () => {
               ))}
             </div>
           </div>
-
+          <div className="">
+            <SearchBar></SearchBar>
+          </div>
           <div className="hidden md:flex items-center space-x-4">
             {/* আইকনের রঙ পরিবর্তন করা হয়েছে */}
             {
-              user?<Link to={isAdmin?'/dashboard/allUsers':'/dashboard/myCart'} className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
-              <HiShoppingCart size={24} />
-              <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >{cart?.length}</p>
-            </Link>:<Link to='/login' className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
-              <HiShoppingCart size={24} />
-              <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >0</p>
-            </Link>
+              user ? <Link to={isAdmin ? '/dashboard/allUsers' : '/dashboard/myCart'} className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
+                <HiShoppingCart size={24} />
+                <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >{cart?.length}</p>
+              </Link> : <Link to='/login' className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
+                <HiShoppingCart size={24} />
+                <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >0</p>
+              </Link>
             }
             {
-              user && <div className=" ">
-                <div className="  cursor-pointer rounded-lg relative transition-colors">
-                  <img
-                    className="w-[50px] h-[50px] rounded-full object-cover"
-                    src={user.photoURL}
-                    alt=""
-                  />
-                  <span
-                    className="font-semibold text-[13px]  opacity-0 absolute top-1/3 left-[-20px]  text-white hover:opacity-100 transition-opacity duration-300"
-                  >
-                    {user.displayName}
-                  </span>
-                </div>
+              user ? <div className='relative '>
+                <div className=" ">
+                  <div className="  cursor-pointer rounded-lg transition-colors">
+                    <img onClick={()=>setProfile(!profile)}
+                      className="w-[50px] h-[50px] rounded-full object-cover"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </div>
 
-              </div>
-            }
-            {
-              user ? <button onClick={()=>handleLogOut()} className='text-2xl border-1 bg-blue-800 rounded-md hover:text-white  hover:bg-white/10" px-2 py-1 text-white'>
-                LogOut</button> : <button className='text-2xl border-1 bg-blue-800 rounded-md  px-2 py-1 text-white'>  <Link to="/login" className="text-indigo-100 hover:text-white  hover:bg-white/10">
-                  Login
-                </Link></button>
+                </div>
+              {
+                profile&&  <div className="  py-5 px-4  bg-white shadow-2xl absolute rounded-md right-0 top-[70px]">
+                  <h5 className='text-1xl '>Name:{user.displayName}</h5>
+                  <h5 className='
+                  text-1xl my-3'>Email:{user.email}</h5>
+                  <button onClick={() => handleLogOut()} className='text-1xl border-1 cursor-pointer bg-red-800 rounded-md hover:text-white  hover:bg-white/10" px-2 py-1 text-white'>
+                    LogOut</button>
+                </div>
+              }
+              </div> : <button className='cursor-pointer text-2xl border-1 bg-blue-800 rounded-md  px-2 py-1 text-white'>  <Link to="/login" className="text-indigo-100 hover:text-white  hover:bg-white/10">
+                Login
+              </Link></button>
             }
           </div>
 
           <div className="md:hidden flex items-center">
             {
-              user?<Link to={isAdmin?'/dashboard/allUsers':'/dashboard/myCart'} className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
-              <HiShoppingCart size={24} />
-              <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >{cart?.length}</p>
-            </Link>:<Link to='/login' className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
-              <HiShoppingCart size={24} />
-              <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >0</p>
-            </Link>
+              user ? <Link to={isAdmin ? '/dashboard/allUsers' : '/dashboard/myCart'} className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
+                <HiShoppingCart size={24} />
+                <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >{cart?.length}</p>
+              </Link> : <Link to='/login' className="text-indigo-100 relative hover:text-white p-2 rounded-full hover:bg-white/10">
+                <HiShoppingCart size={24} />
+                <p className='absolute top-0 left-0 text-2xl font-bold text-red-600' >0</p>
+              </Link>
             }
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -146,7 +153,7 @@ const Header = () => {
               </NavLink>
             ))}
             <Link to="/profile" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-indigo-100 hover:bg-white/10 hover:text-white">
-              
+
             </Link>
           </div>
         </div>

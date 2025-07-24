@@ -5,9 +5,9 @@ import useCart from '../../../Hooks/useCarts';
 import useAuth from '../../../Hooks/useAuth';
 import Swal from 'sweetalert2';
 
-const ProductItem = ({ product }) => {
+const https://bd-hub-server.vercel.app = ({ product }) => {
 
-  const {user}=useAuth()
+
     const axiosSecure=useAxiosSecure();
      const [,refetch]=useCart();
      const location=useLocation();
@@ -81,4 +81,4 @@ const ProductItem = ({ product }) => {
   );
 };
 
-export default ProductItem;
+export default https://bd-hub-server.vercel.app;

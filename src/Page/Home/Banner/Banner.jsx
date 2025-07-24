@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Swiper.js থেকে প্রয়োজনীয় মডিউল ইম্পোর্ট করুন
@@ -13,6 +13,9 @@ import 'swiper/css/effect-fade'; // Fade Effect এর জন্য
 import img1 from '../../../assets/banner/banner1.JPG';            
 import img2 from '../../../assets/banner/banner2.JPG';
 import img3 from '../../../assets/banner/banner3.JPG';
+
+
+
 
 // Hero Section এ দেখানোর জন্য ডাটা
 const heroSlides = [
@@ -43,14 +46,24 @@ const heroSlides = [
 ];
 
 const Banner = () => {
+  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); 
   return (
-    <div className="relative h-[85vh] md:h-[90vh]">
+    <div className="relative h-[45vh] md:h-[75vh]">
       <Swiper
         // Swiper মডিউলগুলো এখানে যোগ করুন
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation // নেভিগেশন অ্যারো দেখানোর জন্য
+         navigation={windowWidth >= 768}  // নেভিগেশন অ্যারো দেখানোর জন্য
         pagination={{ clickable: true }} // ডট পেজিনেশন
         loop={true}
         autoplay={{

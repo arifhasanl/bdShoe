@@ -5,32 +5,40 @@ import { FaEnvelope, FaLock } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Providers/AuthProvider';
 import useProduct from '../Hooks/useProduct';
+import { Helmet } from 'react-helmet-async';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 const Login = () => {
    const { register, handleSubmit, formState: { errors }, reset } = useForm();
    const { signIn } = useContext(AuthContext);
-   const [product]=useProduct();
-   console.log(product);
-   const location=useLocation();
-   const navigate=useNavigate();
-    const from = location?.state?.from?.pathname || '/';
+   const [product] = useProduct();
+   const location = useLocation();
+   const navigate = useNavigate();
+   const from = location?.state?.from?.pathname || '/';
    const onSubmit = async (data) => {
-      console.log(data);
-      // data.image[0] এর মাধ্যমে আপনি ইমেজ ফাইলটি পাবেন
+      const axiosPublic = useAxiosPublic();
       signIn(data.email, data.password)
          .then(res => {
-            Swal.fire({
-               position: "top-end",
-               icon: "success",
-               title: "SignUp successfully",
-               showConfirmButton: false,
-               timer: 1500
-            });
+            // const userInfo = {
+            //    name: data.name,
+            //    email: data.email,
+            //    photo: photo
+            // }
+            // axiosPublic.post('/user', userInfo)
+            //    .then(res => {
+            //       if (res.data.insertedId) {
+            //          reset()
+            //          navigate(from, { replace: true })
+            //       }
+            //    })
             reset()
-              navigate(from ,{replace:true})
+            navigate(from, { replace: true })
          })
    }
    return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
+         <Helmet>
+            <title>BdHub || Login</title>
+         </Helmet>
          <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-center text-gray-800">Create an Account</h2>
 

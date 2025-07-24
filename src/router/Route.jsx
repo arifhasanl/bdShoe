@@ -14,6 +14,7 @@ import MangeBooking from "../Page/dashboard/MangeBooking";
 import PrivetRoute from './PrivetRoute';
 import MangeItem from "../Page/dashboard/MangeItem";
 import UpdateProduct from "../Page/dashboard/addmin/UpdateProduct";
+import SingleProductDetails from "../Page/shear/ProductDetails/SingleProductDetails";
 
 const router=createBrowserRouter([
    {
@@ -40,6 +41,10 @@ const router=createBrowserRouter([
             path:'/product/:id',
             element:<ProductDetails></ProductDetails>,
             loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
+         },
+         {
+            path:'/singleProduct',
+            element:<SingleProductDetails></SingleProductDetails>
          },
          {
             path:'/allProduct/product/:id',

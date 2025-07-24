@@ -5,7 +5,8 @@ import useAdmin from '../Hooks/useAdmin';
 
 const Dashboard = () => {
    const [isSidebarOpen, setSidebarOpen] = useState(false); // State for mobile sidebar
-   const [isAdmin] = useAdmin()
+   const [isAdmin] = useAdmin();
+   // // console.log(isAdmin);
    // const isAdmin=true
 
    // Common NavLink styles

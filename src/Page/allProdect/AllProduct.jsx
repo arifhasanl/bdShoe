@@ -4,6 +4,8 @@ import FilterProduct from './FilterProduct';
 import useProduct from '../../Hooks/useProduct';
 import ProductCard from '../shear/ProductCard/ProductCard';
 import Pagination from './Pagination';
+import { Helmet } from 'react-helmet-async';
+import Banner from '../Home/Banner/Banner';
 
 
 
@@ -63,14 +65,12 @@ const AllProduct = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
-
-
-
-
   return (
     <div className="">
-      <Cover></Cover>
+      <Helmet>
+        <title>BdHub || All Product</title>
+      </Helmet>
+      <Banner></Banner>
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-baseline justify-between border-b border-gray-200 pt-12 pb-6">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">All Shoes</h1>
