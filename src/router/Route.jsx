@@ -15,6 +15,10 @@ import PrivetRoute from './PrivetRoute';
 import MangeItem from "../Page/dashboard/MangeItem";
 import UpdateProduct from "../Page/dashboard/addmin/UpdateProduct";
 import SingleProductDetails from "../Page/shear/ProductDetails/SingleProductDetails";
+import About from "../Page/about/About";
+import Men from "../Page/Men/Men";
+import WoMen from "../Page/women/Women";
+import Kid from "../Page/kids/Kid";
 
 const router=createBrowserRouter([
    {
@@ -50,6 +54,22 @@ const router=createBrowserRouter([
             path:'/allProduct/product/:id',
             element:<ProductDetails></ProductDetails>,
             loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
+         },
+         {
+            path:'/aboutUs',
+            element:<About></About>
+         },
+         {
+            path:'/men',
+            element:<Men></Men>
+         },
+         {
+            path:'/women',
+            element:<WoMen></WoMen>
+         },
+         {
+            path:'/kids',
+            element:<Kid></Kid>
          }
 
       ]

@@ -20,7 +20,7 @@ const SearchBar = () => {
 
     const handler = setTimeout(async () => {
       try {
-        const response = await fetch(`http://localhost:5000/products/suggestions?q=${query}`);
+        const response = await fetch(`https://bd-hub-server.vercel.app/products/suggestions?q=${query}`);
         const data = await response.json();
         setSuggestions(data);
         setShowSuggestions(true);
