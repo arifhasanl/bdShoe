@@ -34,7 +34,6 @@ const ProductCard = ({ product }) => {
 
         axiosSecure.post('/carts', cartItem)
           .then(res => {
-            console.log(res.data);
             if (res.data.insertedId) {
                navigate('/dashboard/myCart')
               Swal.fire({

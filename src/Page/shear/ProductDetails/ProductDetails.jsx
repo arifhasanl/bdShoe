@@ -1,30 +1,31 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData, useSearchParams } from 'react-router-dom';
+import { useLoaderData, useNavigate, useSearchParams } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import useCart from '../../../Hooks/useCarts';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 
 const ProductDetails = () => {
-
+  const [isAdding, setIsAdding] = useState(false);
   //searchBar Product Show
   const [searchParams] = useSearchParams();
-    const [searchData,setSearchData]=useState('')
-    const query = searchParams.get('q'); // URL থেকে 'q' প্যারামিটারটি নেওয়া হচ্ছে
-  console.log(searchData);
-    useEffect(() => {
-  
-      const fetchProducts = async () => {
-          const response = await fetch(`https://bd-hub-server.vercel.app/products/search?q=${query}`);
-          const data = await response.json();
-          setSearchData(data);
-      };
-  
-      fetchProducts();
-    }, [query]); // যখনই URL-এর 'q' প্যারামিটার পরিবর্তন হবে, এই useEffect আবার চলবে
-  
-  console.log(searchData,'searchData');
+  const [searchData, setSearchData] = useState('')
+  const query = searchParams.get('q'); // URL থেকে 'q' প্যারামিটারটি নেওয়া হচ্ছে
+  const navigate=useNavigate()
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+      const response = await fetch(`https://bd-hub-server.vercel.app/products/search?q=${query}`);
+      const data = await response.json();
+      setSearchData(data);
+    };
+
+    fetchProducts();
+  }, [query]); // যখনই URL-এর 'q' প্যারামিটার পরিবর্তন হবে, এই useEffect আবার চলবে
+
+  console.log(searchData, 'searchData');
   const { user } = useContext(AuthContext)
   const { image, name, brand, rating, colors, sizes, price, description, _id } = useLoaderData();
   const [selectedColor, setSelectedColor] = useState(colors[0]);
@@ -32,9 +33,10 @@ const ProductDetails = () => {
   const renderRating = (rating) => {
     return '★'.repeat(rating) + '☆'.repeat(5 - rating);
   };
-  const axiosSecure=useAxiosSecure();
-  const [,refetch]=useCart()
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useCart()
   const handleAddToCart = () => {
+    setIsAdding(true)
     if (user && user?.email) {
       const cartItem = {
         productId: _id,
@@ -44,20 +46,34 @@ const ProductDetails = () => {
       }
       axiosSecure.post('/carts', cartItem)
         .then(res => {
-          console.log(res.data);
           if (res.data.insertedId) {
+            navigate('/dashboard/myCart')
             Swal.fire({
-              position: "top-end",
+              position: "top-center",
               icon: "success",
-              title: "Your work has been saved",
+              title: `${name} added to cart!`,
               showConfirmButton: false,
               timer: 1500
             });
             refetch()
           }
         })
+        .catch(error => {
+          console.error("Failed to add to cart:", error);
+          Swal.fire({
+            position: "top-center",
+            icon: "error",
+            title: "Could not add to cart.",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        })
+        .finally(() => {
+          setIsAdding(false); // লোডিং অবস্থা শেষ
+        });
 
     } else {
+      console.log('login');
       navigate('/login', { state: { from: location } })
     }
   }
@@ -117,8 +133,8 @@ const ProductDetails = () => {
                     key={size}
                     onClick={() => setSelectedSize(size)}
                     className={`px-4 py-2 border rounded-md transition-colors duration-200 ${selectedSize === size
-                        ? 'bg-indigo-600 text-white border-indigo-600'
-                        : 'bg-white text-gray-800 border-gray-300 hover:bg-gray-100'
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-gray-800 border-gray-300 hover:bg-gray-100'
                       }`}
                   >
                     {size}
@@ -128,13 +144,30 @@ const ProductDetails = () => {
             </div>
 
             {/* Add to Cart Button */}
-            <button
-              onClick={handleAddToCart}
-              disabled={!selectedSize}
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
+            <motion.button
+              onClick={() => handleAddToCart(_id)}
+              disabled={isAdding ||!selectedSize}
+               // লোডিং অবস্থায় বাটনটি নিষ্ক্রিয় থাকবে
+              className={`flex items-center disabled:bg-gray-400 disabled:cursor-not-allowed justify-center text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${isAdding
+                  ? 'bg-blue-400 cursor-not-allowed'
+                  : 'bg-blue-600 hover:bg-blue-700'
+                }`}
+              whileHover={{ scale: isAdding ? 1 : 1.05 }} // লোডিং অবস্থায় হোভার ইফেক্ট বন্ধ
+              whileTap={{ scale: isAdding ? 1 : 0.95 }} // লোডিং অবস্থায় ট্যাপ ইফেক্ট বন্ধ
             >
-              Add to Cart
-            </button>
+              {isAdding ? (
+                <>
+                  {/* লোডিং স্পিনার */}
+                  <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Adding...
+                </>
+              ) : (
+                <><p className='cursor-pointer'>Add To Cart</p></>
+              )}
+            </motion.button>
           </div>
         </div>
 
