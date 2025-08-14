@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FaAd, FaBook, FaCalendar, FaHome, FaList, FaShoppingBag, FaUser, FaUtensils, FaBars, FaTimes } from "react-icons/fa";
 import useAdmin from '../Hooks/useAdmin';
+import useCart from '../Hooks/useCarts';
 
 const Dashboard = () => {
    const [isSidebarOpen, setSidebarOpen] = useState(false); // State for mobile sidebar
-   const [isAdmin] = useAdmin();
+   const [isAdmin, isAdminLoading] = useAdmin();
+   const [, ,isLoading] = useCart()
    // // console.log(isAdmin);
    // const isAdmin=true
 
@@ -47,7 +49,13 @@ const Dashboard = () => {
          </ul>
       </>
    );
-
+   if (isAdminLoading || isLoading) {
+      return (
+         <div className="">
+            <p className='w-full h-svh flex justify-center items-center'>Loading...</p>
+         </div>
+      )
+   }
    return (
       <div className="container mx-auto">
          <div className='relative flex min-h-screen bg-slate-100'>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaGoogle } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Providers/AuthProvider';
 import useProduct from '../Hooks/useProduct';
@@ -9,13 +9,21 @@ import { Helmet } from 'react-helmet-async';
 import useAxiosPublic from '../Hooks/useAxiosPublic';
 const Login = () => {
    const { register, handleSubmit, formState: { errors }, reset } = useForm();
-   const { signIn } = useContext(AuthContext);
+   const { signIn,googleSignIn,isLoading } = useContext(AuthContext);
    const [product] = useProduct();
    const location = useLocation();
    const navigate = useNavigate();
    const from = location?.state?.from?.pathname || '/';
+    const axiosPublic = useAxiosPublic();
+      const handleGoogleSingIn=()=>{
+         googleSignIn()
+         .then(res=>{
+            navigate(from,{replace:true})
+         })
+      }
+
    const onSubmit = async (data) => {
-      const axiosPublic = useAxiosPublic();
+     
       signIn(data.email, data.password)
          .then(res => {
             // const userInfo = {
@@ -30,8 +38,12 @@ const Login = () => {
             //          navigate(from, { replace: true })
             //       }
             //    })
+
             reset()
             navigate(from, { replace: true })
+         })
+         .then(error=>{
+            console.log(error.message);
          })
    }
    return (
@@ -101,10 +113,13 @@ const Login = () => {
                      type="submit"
                      className="w-full py-3 font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
                   >
-                     Login
+                     Login 
                   </button>
                </div>
             </form>
+            <div className="">
+               <button onClick={() => handleGoogleSingIn()} className='cursor-pointer w-full py-3 font-semibold text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300 flex justify-center items-center gap-2'><FaGoogle></FaGoogle> Google SingIn</button>
+            </div>
             <p className='text-center text-1xl'>Are You New Please <Link className='text-green-800' to={'/signUp'}>SignUp</Link></p>
          </div>
 

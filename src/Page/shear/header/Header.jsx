@@ -47,8 +47,8 @@ const Header = () => {
 
           <div className="flex-shrink-0">
             {/* লোগোর টেক্সট সাদা করা হয়েছে */}
-            <Link to="/" className="text-2xl font-bold text-white">
-              StepStyle
+            <Link to="/" className=" text-1xl md:text-2xl font-bold text-white">
+              bdHubShoe
             </Link>
           </div>
 

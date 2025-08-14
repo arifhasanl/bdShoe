@@ -36,17 +36,10 @@ const MyCart = () => {
                      refetch()
                   }
                })
-
          }
       });
-
    }
-
-
    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-   if (isLoading) {
-      return <><p>Loading...</p></>
-   }
    if (cart.length === 0) {
       return (
          <div className="flex h-64 items-center justify-center rounded-lg bg-white p-6 text-center shadow-md">

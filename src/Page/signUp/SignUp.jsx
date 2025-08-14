@@ -1,20 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaUser, FaEnvelope, FaLock, FaImage } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaLock, FaImage, FaGoogle } from 'react-icons/fa';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+const from = location?.state?.from?.pathname || '/';
 const SignUp = () => {
    // useForm hook থেকে প্রয়োজনীয় ফাংশন এবং অবজেক্ট নিন
    const { register, handleSubmit, formState: { errors }, reset } = useForm();
    const axiosPublic = useAxiosPublic();
-   const navigate=useNavigate()
-   const { createUser, updateUserProfile } = useContext(AuthContext)
+   const navigate = useNavigate();
+   const [loading,setLoading]=useState(false)
+   const { createUser, updateUserProfile, isLoading ,googleSignIn} = useContext(AuthContext)
    // ফর্ম সাবমিট হলে এই ফাংশনটি কাজ করবে
    const onSubmit = async (data) => {
+      setLoading(true)
       // data.image[0] এর মাধ্যমে আপনি ইমেজ ফাইলটি পাবেন
       const imageFile = { image: data.image[0] }
       const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -31,24 +34,30 @@ const SignUp = () => {
                      const userInfo = {
                         name: data.name,
                         email: data.email,
-                        photo:photo
+                        photo: photo
                      }
                      axiosPublic.post('/user', userInfo)
                         .then(res => {
                            if (res.data.insertedId) {
+                              setLoading(false)
                               reset()
                               alert('users added success')
-                              navigate('/')
+                               navigate(from,{replace:true})
                            }
                         })
-                     
+
                   })
             })
 
 
       }
    };
-
+      const handleGoogleSingIn=()=>{
+         googleSignIn()
+         .then(res=>{
+            navigate(from,{replace:true})
+         })
+      }
    return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
          <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
@@ -145,12 +154,18 @@ const SignUp = () => {
                <div>
                   <button
                      type="submit"
-                     className="w-full py-3 font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
+                     className={`${isLoading && 'disabled'} cursor-pointer w-full py-3 font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300`}
                   >
-                     Sign Up
+                     SingUp
+                     {
+                       loading && <span className="loading ml-5 loading-spinner text-secondary">loading...</span>
+                     }
                   </button>
                </div>
             </form>
+            <div className="">
+               <button onClick={()=>handleGoogleSingIn()} className='cursor-pointer w-full py-3 font-semibold text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300 flex justify-center items-center gap-2'><FaGoogle></FaGoogle> Google SingIn</button>
+            </div>
             <p className='text-center text-1xl'>You Have All Ready Account Please <Link className='text-green-800' to={'/login'}>Login</Link></p>
          </div>
       </div>

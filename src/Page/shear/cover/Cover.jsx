@@ -3,11 +3,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 import React from 'react';
+import AnimatedTextCharacter from "../../about/AnimatedTextCharacter";
+import FadeIn from "../../about/FadeIn";
 
-const Cover = ({heading,subHeading,image}) => {
+
+const Cover = ({ heading, subHeading, image }) => {
     return (
-        <div className="mb-12">
-            <div className="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center flex items-center justify-center text-white">
+        <div className="mb-12 container mx-auto ">
+            <div className="relative w-full h-[50vh] md:h-[60vh] bg-cover bg-center flex items-center justify-center text-white">
                 {/* Background Image */}
                 <img
                     src={image}
@@ -21,10 +24,15 @@ const Cover = ({heading,subHeading,image}) => {
                 {/* Content */}
                 <div className="relative z-10 text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
-                        {heading}
+                        <AnimatedTextCharacter
+                            text={heading}
+                            className="text-4xl md:text-6xl font-extrabold leading-tight"
+                        />
                     </h1>
                     <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-                      {subHeading}
+                        <FadeIn direction="up" delay={0.6}>
+                            <p className="mt-4 text-lg md:text-xl max-w-2xl">{subHeading}</p>
+                        </FadeIn>
                     </p>
                     <a
                         href="/AllProduct"

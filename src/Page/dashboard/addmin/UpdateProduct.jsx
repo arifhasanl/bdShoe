@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaSyncAlt } from 'react-icons/fa'; // Changed icon
 import { useParams } from 'react-router-dom';
@@ -14,6 +14,7 @@ const UpdateProduct = () => {
     const { id } = useParams(); // Get product ID from URL
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
+    const [loading,setLoading]=useState(false);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     // 1. Fetch the product data using the ID
@@ -41,7 +42,7 @@ const UpdateProduct = () => {
 
     const onSubmit = async (data) => {
         let imageUrl = product?.image; // Default to existing image URL
-
+        setLoading(true)
         // 3. If a new image is uploaded, upload it to ImgBB
         if (data.image && data.image.length > 0) {
             const imageFile = { image: data.image[0] };
@@ -50,6 +51,7 @@ const UpdateProduct = () => {
             });
             if (res.data.success) {
                 imageUrl = res.data.data.display_url; // Get new image URL
+                console.log(imageUrl);
             } else {
                 Swal.fire("Error!", "Image upload failed. Please try again.", "error");
                 return; // Stop the submission if image upload fails
@@ -72,7 +74,7 @@ const UpdateProduct = () => {
         };
         
         // 5. Send PATCH request to update the product
-        const menuResponse = await axiosSecure.patch(`/product/${id}`, updatedProductData);
+        const menuResponse = await axiosSecure.patch(`/product/updateProduct/${id}`, updatedProductData);
 
         if (menuResponse.data.modifiedCount > 0) {
             refetch(); // Refetch the data to show the latest version
@@ -83,6 +85,7 @@ const UpdateProduct = () => {
                 showConfirmButton: false,
                 timer: 1500
             });
+            setLoading(false)
         } else {
              Swal.fire({
                 icon: "info",
@@ -131,8 +134,8 @@ const UpdateProduct = () => {
                         <select id="brand" {...register("brand", { required: "Please select a brand" })} className={inputStyle}>
                             <option value="">Select Brand</option>
                             {brandOptions.map(brand => <option key={brand} value={brand}>{brand}</option>)}
-                        </select>
-                        {errors.brand && <p className="text-red-500 text-xs mt-1">{errors.brand.message}</p>}
+                        </select> 
+                         {errors.brand && <p className="text-red-500 text-xs mt-1">{errors.brand.message}</p>}
                     </div>
                 </div>
 
@@ -154,7 +157,7 @@ const UpdateProduct = () => {
                             <option value="">Select Gender</option>
                             <option value="men">Men</option>
                             <option value="women">Women</option>
-                            <option value="unisex">Unisex</option>
+                            <option value="kids">Kids</option>
                         </select>
                         {errors.man && <p className="text-red-500 text-xs mt-1">{errors.man.message}</p>}
                     </div>
@@ -219,7 +222,7 @@ const UpdateProduct = () => {
 
                 {/* Submit Button */}
                 <button type="submit" className="w-full bg-orange-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-orange-600 transition duration-300 ease-in-out flex items-center justify-center gap-2">
-                    Update Product <FaSyncAlt />
+                    Update Product {loading&& <>Loading...</>} <FaSyncAlt />
                 </button>
             </form>
         </div>

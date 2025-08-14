@@ -3,6 +3,7 @@ import useProduct from '../../Hooks/useProduct';
 import ProductCard from '../shear/ProductCard/ProductCard';
 import Pagination from '../allProdect/Pagination';
 import Cover from '../shear/cover/Cover';
+import { Helmet } from 'react-helmet-async';
 
 const WoMen = () => {
 const [products,,isLoading]=useProduct();
@@ -33,6 +34,9 @@ const [products,,isLoading]=useProduct();
   }
   return (
     <div className="container mx-auto">
+      <Helmet>
+                      <title>BdHub || Womens</title>
+                  </Helmet>
       {/* পেজের হেডিং */}
        <Cover heading={"WoMen's Collection"} subHeading={"Find your perfect pair from our exclusive men's collection."} image={"https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"}></Cover>
       <div className="">

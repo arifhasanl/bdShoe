@@ -40,6 +40,7 @@ const AddItem = () => {
                 image: res.data.data.display_url
                 // Sizes and Tags are already arrays from checkboxes
             };
+            console.log(processedData);
             const menuResponse = await axiosSecure.post('/product', processedData)
             if (menuResponse.data.insertedId) {
             
@@ -50,14 +51,11 @@ const AddItem = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                reset()
+                // reset()
             }
         }
 
-        console.log("Final Data to be sent:", processedData);
 
-        alert('Item added successfully! Check the console for the data object.');
-        reset();
     };
 
     // Reusable styles

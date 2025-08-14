@@ -34,10 +34,9 @@ const Footer = () => {
                <div>
                   <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                   <ul className="space-y-3">
-                     <li><a href="/about" className="hover:text-white transition-colors duration-300">About Us</a></li>
-                     <li><a href="/products" className="hover:text-white transition-colors duration-300">Products</a></li>
-                     <li><a href="/blog" className="hover:text-white transition-colors duration-300">Blog</a></li>
-                     <li><a href="/contact" className="hover:text-white transition-colors duration-300">Contact Us</a></li>
+                     <li><a href="/aboutUs" className="hover:text-white transition-colors duration-300">About Us</a></li>
+                     <li><a href="/allProduct" className="hover:text-white transition-colors duration-300">Products</a></li>
+                     <li><a href="/" className="hover:text-white transition-colors duration-300">Contact Us</a></li>
                   </ul>
                </div>
 
@@ -45,10 +44,10 @@ const Footer = () => {
                <div>
                   <h3 className="text-white text-lg font-semibold mb-4">Support</h3>
                   <ul className="space-y-3">
-                     <li><a href="/faq" className="hover:text-white transition-colors duration-300">FAQ</a></li>
-                     <li><a href="/shipping" className="hover:text-white transition-colors duration-300">Shipping Policy</a></li>
-                     <li><a href="/returns" className="hover:text-white transition-colors duration-300">Return Policy</a></li>
-                     <li><a href="/privacy" className="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                     <li><a href="/" className="hover:text-white transition-colors duration-300">FAQ</a></li>
+                     <li><a href="/" className="hover:text-white transition-colors duration-300">Shipping Policy</a></li>
+                     <li><a href="/" className="hover:text-white transition-colors duration-300">Return Policy</a></li>
+                     <li><a href="/" className="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
                   </ul>
                </div>
 

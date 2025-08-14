@@ -5,14 +5,14 @@ import useProduct from '../Hooks/useProduct';
 import Footer from './../Page/shear/Footer/Footer';
 
 const Main = () => {
-   // const [products,,isLoading]=useProduct()
-   // if(isLoading){
-   //    return(
-   //       <div className="">
-   //          <p className='w-full h-svh flex justify-center items-center'>Loading...</p>
-   //       </div>
-   //    )
-   // }
+   const [products,,isLoading]=useProduct()
+   if(isLoading){
+      return(
+         <div className="">
+            <p className='w-full h-svh flex justify-center items-center'>Loading...</p>
+         </div>
+      )
+   }
    return (
       <div>
          <Header></Header>
