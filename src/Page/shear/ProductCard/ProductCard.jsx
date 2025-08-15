@@ -97,7 +97,7 @@ const ProductCard = ({ product }) => {
               <p className="text-xl font-semibold text-gray-900">${product.price}</p>
             <div className="flex justify-between items-center mt-4 w-full">
              
-               <Link to={`product/${product._id}`}>
+               <Link to={`product/${product?._id}`}>
                   <motion.button 
                      className="px-4 py-2 cursor-pointer bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-colors"
                      whileHover={{ scale: 1.05 }}

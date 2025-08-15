@@ -56,6 +56,21 @@ const router=createBrowserRouter([
             loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
          },
          {
+            path:'/women/product/:id',
+            element:<ProductDetails></ProductDetails>,
+            loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
+         },
+         {
+            path:'/men/product/:id',
+            element:<ProductDetails></ProductDetails>,
+            loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
+         },
+         {
+            path:'/kids/product/:id',
+            element:<ProductDetails></ProductDetails>,
+            loader:({params})=>fetch(`https://bd-hub-server.vercel.app/product/${params.id}`)
+         },
+         {
             path:'/aboutUs',
             element:<About></About>
          },

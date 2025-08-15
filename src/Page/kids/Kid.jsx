@@ -72,9 +72,9 @@ const Men = () => {
                      animate="visible"
                      key={currentPage} // পেজ পরিবর্তন হলে অ্যানিমেশন রি-ট্রিগার হবে
                   >
-                     {currentItems.map(shoe => (
-                        <motion.div key={shoe.id} variants={itemVariants}>
-                           <ProductCard product={shoe} />
+                     {currentItems.map(product=> (
+                        <motion.div key={product.id} variants={itemVariants}>
+                           <ProductCard product={product} />
                         </motion.div>
                      ))}
                   </motion.div>
